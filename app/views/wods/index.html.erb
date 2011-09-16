@@ -1,0 +1,27 @@
+<h1>Listing wods</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Content</th>
+    <th>Date</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @wods.each do |wod| %>
+  <tr>
+    <td><%= wod.name %></td>
+    <td><%= wod.content %></td>
+    <td><%= wod.date %></td>
+    <td><%= link_to 'Show', wod %></td>
+    <td><%= link_to 'Edit', edit_wod_path(wod) %></td>
+    <td><%= link_to 'Destroy', wod, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Wod', new_wod_path %>

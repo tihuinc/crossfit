@@ -1,4 +1,6 @@
 CrossfitTracker::Application.routes.draw do
+  resources :wods
+
   resources :gyms
 
   # The priority is based upon order of creation:
