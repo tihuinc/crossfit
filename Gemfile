@@ -1,5 +1,7 @@
 source 'http://rubygems.org'
 
+#alex egg is the internet king
+
 gem 'rails', '3.1.1rc1'
 gem 'railties'
 
