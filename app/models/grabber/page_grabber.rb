@@ -1,4 +1,4 @@
-class Grabber::Grabber
+class Grabber::PageGrabber
   def self.agent
     @agent ||= Mechanize.new
   end
