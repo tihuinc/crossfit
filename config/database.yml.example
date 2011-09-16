@@ -1,0 +1,14 @@
+defaults: &defaults
+  adapter: postgresql
+  username: postgres
+  password:
+  host: localhost
+  pool: 5
+  wait_timeout: 5
+
+development:
+  database: crossfit_development
+  <<: *defaults
+
+test:
+  database: crossfit_test
