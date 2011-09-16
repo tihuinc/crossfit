@@ -10,6 +10,10 @@ gem 'pg', '0.11.0'
 gem 'memcache-client'
 gem 'devise'
 
+group :development do
+  gem 'mongrel', '1.2.0.pre2'
+end
+
 # Gems used only for assets and not required
 # in production environments by default.
 # group :assets do
