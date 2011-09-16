@@ -27,4 +27,6 @@ CrossfitTracker::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  DEFAULT_GYM_URL = "http://www.crossfitdelmar.com/"
 end
