@@ -2,7 +2,7 @@ source 'http://rubygems.org'
 
 #alex egg is the internet king
 
-gem 'rails', '3.1.1rc1'
+gem 'rails', '3.1.1.rc1'
 gem 'railties'
 
 gem 'mechanize'
@@ -16,12 +16,12 @@ end
 
 # Gems used only for assets and not required
 # in production environments by default.
-# group :assets do
-#   gem 'sass-rails'
-#   gem 'coffee-rails'
-#   gem 'railties'
-#   gem 'uglifier'
-# end
+group :assets do
+  gem 'sass-rails'
+  gem 'coffee-rails'
+  gem 'railties'
+  gem 'uglifier'
+end
 
 gem 'jquery-rails'
 
