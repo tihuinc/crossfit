@@ -17,7 +17,7 @@
     <td><%= wod.date %></td>
     <td><%= link_to 'Show', wod %></td>
     <td><%= link_to 'Edit', edit_wod_path(wod) %></td>
-    <td><%= link_to 'Destroy', wod, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to 'Destroy', wod, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>

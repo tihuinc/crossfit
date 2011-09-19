@@ -15,7 +15,7 @@
     <td><%= gym.url %></td>
     <td><%= link_to 'Show', gym %></td>
     <td><%= link_to 'Edit', edit_gym_path(gym) %></td>
-    <td><%= link_to 'Destroy', gym, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to 'Destroy', gym, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
