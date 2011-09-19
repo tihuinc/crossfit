@@ -27,7 +27,7 @@ namespace :bundler do
   task(:install)   { run("sudo gem install bundler --version=0.9.3 --source=http://gemcutter.org --no-rdoc --no-ri") }
   task(:uninstall) { run("sudo gem uninstall bundler --all") }
   task :bundle_new_release do
-    run("cd #{release_path} && bundle install #{shared_path}/bundler_gems && bundle lock")
+    run("cd #{release_path} && bundle #{shared_path}/bundler_gems")
   end
 end
 after 'deploy:update_code', 'bundler:bundle_new_release'
