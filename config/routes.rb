@@ -1,9 +1,16 @@
 CrossfitTracker::Application.routes.draw do
+  devise_for :users
+
   get "welcome/index"
 
   resources :wods
+  resources :users
 
   resources :gyms
+
+  match 'sign_in' => 'welcome#new'
+  match 'sign_up' => 'welcome#sign_up'
+  match 'retrieve' => 'welcome#retrieve'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

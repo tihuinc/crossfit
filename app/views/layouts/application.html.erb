@@ -11,8 +11,17 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <% if notice %>
+    <p class="notice"><%= notice %></p>
+  <% end %>
 
-<%= yield %>
+  <% if alert %>
+    <p class="alert"><%= alert %></p>
+  <% end %>
+
+  <div class="content">
+    <%= yield %>
+  </div>
 
 </body>
 </html>

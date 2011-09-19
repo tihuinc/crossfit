@@ -1,0 +1,10 @@
+<div class="authentication">
+  <%= form_for('user', :url => password_path('user'), :html => { :method => :post }) do |f| %>
+    <p><%= f.label :email %><br />
+    <%= f.text_field :email %></p>
+
+    <p><%= f.submit "Send Rest Info" %></p>
+  <% end %>
+
+  <%= render :partial => "shared/links", :locals => { :action => 'retrieve' } %>
+</div>

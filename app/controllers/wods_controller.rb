@@ -1,6 +1,7 @@
 class WodsController < ApplicationController
   # GET /wods
   # GET /wods.json
+  before_filter :authenticate_user!
   def index
     @wods = Wod.all
 
