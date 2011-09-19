@@ -9,6 +9,7 @@ gem 'mechanize'
 gem 'pg', '0.11.0'
 gem 'memcache-client'
 gem 'devise'
+gem 'therubyracer'
 
 group :development do
   gem 'mongrel', '1.2.0.pre2'
