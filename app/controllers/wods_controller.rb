@@ -6,7 +6,7 @@ class WodsController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @wods }
+      format.json { render :json => @wods }
     end
   end
 
@@ -17,7 +17,7 @@ class WodsController < ApplicationController
 
     respond_to do |format|
       format.html # show.html.erb
-      format.json { render json: @wod }
+      format.json { render :json => @wod }
     end
   end
 
@@ -28,7 +28,7 @@ class WodsController < ApplicationController
 
     respond_to do |format|
       format.html # new.html.erb
-      format.json { render json: @wod }
+      format.json { render :json => @wod }
     end
   end
 
@@ -44,11 +44,11 @@ class WodsController < ApplicationController
 
     respond_to do |format|
       if @wod.save
-        format.html { redirect_to @wod, notice: 'Wod was successfully created.' }
-        format.json { render json: @wod, status: :created, location: @wod }
+        format.html { redirect_to @wod, :notice => 'Wod was successfully created.' }
+        format.json { render :json => @wod, :status => :created, :location => @wod }
       else
-        format.html { render action: "new" }
-        format.json { render json: @wod.errors, status: :unprocessable_entity }
+        format.html { render :action => "new" }
+        format.json { render :json => @wod.errors, :status => :unprocessable_entity }
       end
     end
   end
@@ -60,11 +60,11 @@ class WodsController < ApplicationController
 
     respond_to do |format|
       if @wod.update_attributes(params[:wod])
-        format.html { redirect_to @wod, notice: 'Wod was successfully updated.' }
+        format.html { redirect_to @wod, :notice => 'Wod was successfully updated.' }
         format.json { head :ok }
       else
-        format.html { render action: "edit" }
-        format.json { render json: @wod.errors, status: :unprocessable_entity }
+        format.html { render :action => "edit" }
+        format.json { render :json => @wod.errors, :status => :unprocessable_entity }
       end
     end
   end
