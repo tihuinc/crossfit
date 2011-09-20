@@ -11,6 +11,15 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <header>
+	<%if user_signed_in?%>
+		<%=current_user.email%>
+	<%else%>
+ 		<%=link_to "signin", "/users/sign_in"%>
+	<%end%>
+	<%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
+	
+  </header>
   <% if notice %>
     <p class="notice"><%= notice %></p>
   <% end %>

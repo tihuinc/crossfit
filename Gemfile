@@ -5,11 +5,12 @@ source 'http://rubygems.org'
 gem 'rails', '3.1.1.rc1'
 gem 'railties'
 
-gem 'mechanize'
+#gem 'mechanize'
 gem 'pg', '0.11.0'
 gem 'memcache-client'
 gem 'devise'
 gem 'therubyracer'
+gem "omniauth", "~> 0.2.6"
 
 group :development do
   gem 'mongrel', '1.2.0.pre2'
