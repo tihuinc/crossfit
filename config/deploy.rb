@@ -1,4 +1,5 @@
 require 'capistrano/ext/multistage'
+require 'bundler/capistrano'
 
 set :stages, %w(production)
 
@@ -21,16 +22,6 @@ set :copy_compression, :gzip
 set :deploy_via, :copy
 
 set(:rails_env) { "#{stage}" } 
-
-
-namespace :bundler do
-  task(:install)   { run("sudo gem install bundler --version=0.9.3 --source=http://gemcutter.org --no-rdoc --no-ri") }
-  task(:uninstall) { run("sudo gem uninstall bundler --all") }
-  task :bundle_new_release do
-    run("cd #{release_path} && bundle #{shared_path}/bundler_gems")
-  end
-end
-after 'deploy:update_code', 'bundler:bundle_new_release'
 
 namespace :deploy do
 
@@ -84,7 +75,4 @@ namespace :deploy do
   end
 
   after "deploy:update_code", "deploy:setup_config"
-
 end
-
-
