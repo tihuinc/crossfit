@@ -12,16 +12,6 @@
 </head>
 <body>
   <header>
-  <% if user_signed_in? %>
-    <%= current_user.email %>
-  <% else %>
-    <%= link_to "signin", "/users/sign_in" %>
-  <% end %>
-
-  <% unless user_signed_in? %>
-    <%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
-  <% end %>
-
   </header>
   <% if notice %>
     <p class="notice"><%= notice %></p>
@@ -32,6 +22,12 @@
   <% end %>
 
   <div class="content">
+    <% if user_signed_in? %>
+      <%= current_user.email %>
+    <% end %>
+    <br />
+    <br />
+
     <%= yield %>
   </div>
 
