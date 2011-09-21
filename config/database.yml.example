@@ -12,3 +12,4 @@ development:
 
 test:
   database: crossfit_test
+  <<: *defaults
