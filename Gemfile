@@ -5,7 +5,7 @@ source 'http://rubygems.org'
 gem 'rails', '3.1.1.rc1'
 gem 'railties'
 
-#gem 'mechanize'
+gem 'mechanize'
 gem 'pg', '0.11.0'
 gem 'memcache-client'
 gem 'devise'
