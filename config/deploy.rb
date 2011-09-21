@@ -10,16 +10,6 @@ set :scm, 'git'
 
 set :user, 'ubuntu'
 set :use_sudo, false
-set :copy_strategy, :export
-
-set :copy_cache, true
-set :copy_cache, "/tmp/crossfit"
-
-
-set :copy_exclude, [".git"]
-set :copy_compression, :gzip
-
-set :deploy_via, :copy
 
 set(:rails_env) { "#{stage}" } 
 
