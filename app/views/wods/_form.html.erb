@@ -15,14 +15,22 @@
     <%= f.label :name %><br />
     <%= f.text_field :name %>
   </div>
+
   <div class="field">
     <%= f.label :content %><br />
-    <%= f.text_field :content %>
+    <%= f.text_area :content, :size => "40x10" %>
   </div>
+
+  <div class="field">
+    <%= f.label :wod_type %><br />
+    <%= f.select :wod_type, Wod::WOD_TYPES %>
+  </div>
+
   <div class="field">
     <%= f.label :date %><br />
     <%= f.datetime_select :date %>
   </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
