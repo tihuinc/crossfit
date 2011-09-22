@@ -60,7 +60,4 @@ CrossfitTracker::Application.configure do
   config.active_support.deprecation = :notify
   DEFAULT_GYM_URL = "http://www.crossfitdelmar.com/"
 
-  FACEBOOK_APP_ID     = "150231875070757"
-  FACEBOOK_APP_SECRET = "c5f91b671a04cdec5e2b4d7c93c8bc39"
-
 end
