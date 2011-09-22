@@ -1,0 +1,35 @@
+<h1>Listing workout_records</h1>
+
+<table>
+  <tr>
+    <th>User</th>
+    <th>Time</th>
+    <th>Wod</th>
+    <th>Rounds</th>
+    <th>Max reps</th>
+    <th>Scaled</th>
+    <th>Detail</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @workout_records.each do |workout_record| %>
+  <tr>
+    <td><%= workout_record.user_id %></td>
+    <td><%= workout_record.time %></td>
+    <td><%= workout_record.wod_id %></td>
+    <td><%= workout_record.rounds %></td>
+    <td><%= workout_record.max_reps %></td>
+    <td><%= workout_record.scaled %></td>
+    <td><%= workout_record.detail %></td>
+    <td><%= link_to 'Show', workout_record %></td>
+    <td><%= link_to 'Edit', edit_workout_record_path(workout_record) %></td>
+    <td><%= link_to 'Destroy', workout_record, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Workout record', new_workout_record_path %>

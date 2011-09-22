@@ -1,4 +1,6 @@
 CrossfitTracker::Application.routes.draw do
+  resources :workout_records
+
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
 
   get "welcome/index"

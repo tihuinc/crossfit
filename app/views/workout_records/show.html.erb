@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%= @workout_record.user_id %>
+</p>
+
+<p>
+  <b>Time:</b>
+  <%= @workout_record.time %>
+</p>
+
+<p>
+  <b>Wod:</b>
+  <%= @workout_record.wod_id %>
+</p>
+
+<p>
+  <b>Rounds:</b>
+  <%= @workout_record.rounds %>
+</p>
+
+<p>
+  <b>Max reps:</b>
+  <%= @workout_record.max_reps %>
+</p>
+
+<p>
+  <b>Scaled:</b>
+  <%= @workout_record.scaled %>
+</p>
+
+<p>
+  <b>Detail:</b>
+  <%= @workout_record.detail %>
+</p>
+
+
+<%= link_to 'Edit', edit_workout_record_path(@workout_record) %> |
+<%= link_to 'Back', workout_records_path %>
