@@ -5,7 +5,7 @@ CrossfitTracker::Application.routes.draw do
 
   get "welcome/index"
 
-  resources :wods
+  resources :workouts
   resources :users
 
   resources :gyms

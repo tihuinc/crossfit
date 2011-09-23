@@ -1,8 +1,8 @@
-class Wod < ActiveRecord::Base
+class Workout < ActiveRecord::Base
   # constants
   TIME = "time".freeze
   AMRAP = "AMRAP".freeze
-  WOD_TYPES = [TIME, AMRAP]
+  WORKOUT_TYPES = [TIME, AMRAP]
 
   # associations
   has_many :workout_records

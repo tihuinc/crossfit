@@ -1,10 +1,10 @@
-<%= form_for(@wod) do |f| %>
-  <% if @wod.errors.any? %>
+<%= form_for(@workout) do |f| %>
+  <% if @workout.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@wod.errors.count, "error") %> prohibited this wod from being saved:</h2>
+      <h2><%= pluralize(@workout.errors.count, "error") %> prohibited this workout from being saved:</h2>
 
       <ul>
-      <% @wod.errors.full_messages.each do |msg| %>
+      <% @workout.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
       <% end %>
       </ul>
@@ -22,8 +22,8 @@
   </div>
 
   <div class="field">
-    <%= f.label :wod_type %><br />
-    <%= f.select :wod_type, Wod::WOD_TYPES %>
+    <%= f.label :workout_type %><br />
+    <%= f.select :workout_type, Workout::WOD_TYPES %>
   </div>
 
   <div class="field">

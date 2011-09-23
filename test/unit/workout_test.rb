@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class WodTest < ActiveSupport::TestCase
+class WorkoutTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
