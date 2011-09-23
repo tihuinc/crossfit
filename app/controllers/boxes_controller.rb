@@ -1,4 +1,4 @@
-class BoxsController < ApplicationController
+class BoxesController < ApplicationController
   # GET /boxes
   # GET /boxes.json
   def index
