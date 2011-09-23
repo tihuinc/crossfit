@@ -11,9 +11,9 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110919205645) do
+ActiveRecord::Schema.define(:version => 20110923045018) do
 
-  create_table "gyms", :force => true do |t|
+  create_table "boxes", :force => true do |t|
     t.string   "name"
     t.string   "url"
     t.datetime "created_at"
@@ -38,12 +38,28 @@ ActiveRecord::Schema.define(:version => 20110919205645) do
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
   add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
 
-  create_table "wods", :force => true do |t|
+  create_table "workout_records", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "time"
+    t.integer  "wod_id"
+    t.integer  "rounds"
+    t.integer  "max_reps"
+    t.boolean  "scaled"
+    t.text     "detail"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "workout_records", ["user_id"], :name => "index_workout_records_on_user_id"
+  add_index "workout_records", ["wod_id"], :name => "index_workout_records_on_wod_id"
+
+  create_table "workouts", :force => true do |t|
     t.string   "name"
-    t.string   "content"
+    t.text     "content"
     t.datetime "date"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "wod_type"
   end
 
 end

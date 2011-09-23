@@ -1,10 +1,10 @@
-<%= form_for(@gym) do |f| %>
-  <% if @gym.errors.any? %>
+<%= form_for(@box) do |f| %>
+  <% if @box.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@gym.errors.count, "error") %> prohibited this gym from being saved:</h2>
+      <h2><%= pluralize(@box.errors.count, "error") %> prohibited this box from being saved:</h2>
 
       <ul>
-      <% @gym.errors.full_messages.each do |msg| %>
+      <% @box.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
       <% end %>
       </ul>
