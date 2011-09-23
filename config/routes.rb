@@ -8,7 +8,7 @@ CrossfitTracker::Application.routes.draw do
   resources :workouts
   resources :users
 
-  resources :gyms
+  resources :boxes
 
   match 'sign_in' => 'welcome#new'
   match 'sign_up' => 'welcome#sign_up'
@@ -63,7 +63,7 @@ CrossfitTracker::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'welcome#index'
+  root :to => 'workouts#index'
 
   # See how all your routes lay out with "rake routes"
 
