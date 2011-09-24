@@ -2,18 +2,38 @@
  * This is a manifest file that'll automatically include all the stylesheets available in this directory
  * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
  * the top of the compiled file, but it's generally better to create a new file per style scope.
+ *= require screen
  *= require_self
- *= require_tree . 
+ *= require_tree .
 */
 
-.content {
-  width: 950px;
+body {
+  background: #040404 url('<%= asset_path "bg-top.png" %>') 50% 0 no-repeat;
+  color: #4a4a4a;
+  font: normal 12px/1.25 "Trebuchet MS", Arial, sans-serif;
+  min-width: 990px;
+}
+
+.header {
+  padding-top:180px;
+  background: url('<%= asset_path "bg-sides.png" %>') bottom center repeat-x;
+  position: relative;
+}
+
+.middle{
+  background: #d3d1ce url('<%= asset_path "bg-middle.png" %>') top center repeat-x;
+  border-bottom: 4px solid #777674;
+  min-height: 400px;
+  min-width: 1120px;
+}
+
+.wrapper {
+  width: 990px;
   margin: 0 auto;
-  background-color: #fff;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-  border: 1px solid #d8d8d8;
+}
+
+.content {
+  padding: 25px 0;
   text-align: left;
   overflow: hidden;
   padding: 10px;

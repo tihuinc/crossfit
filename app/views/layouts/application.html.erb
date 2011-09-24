@@ -2,31 +2,35 @@
 <html>
 <head>
   <title>CrossfitTracker</title>
-  <!--[if lt IE8]><%= stylesheet_link_tag 'blueprint/ie' %><![endif] -->
 
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <header>
-  </header>
-  <% if notice %>
-    <p class="notice"><%= notice %></p>
-  <% end %>
+  <div class="header">
+  </div>
 
-  <% if alert %>
-    <p class="alert"><%= alert %></p>
-  <% end %>
+  <div class="middle">
+    <div class="wrapper">
 
-  <div class="content">
-    <% if user_signed_in? %>
-      <%= current_user.email %>
-    <% end %>
-    <br />
-    <br />
+      <div class="content">
+        <% if notice %>
+          <p class="notice"><%= notice %></p>
+        <% end %>
 
-    <%= yield %>
+        <% if alert %>
+          <p class="alert"><%= alert %></p>
+        <% end %>
+
+        <% if user_signed_in? %>
+          <%= current_user.email %>
+        <% end %>
+        <br />
+
+        <%= yield %>
+      </div>
+    </div>
   </div>
 
 </body>
