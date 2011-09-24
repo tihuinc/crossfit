@@ -1,19 +1,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US"
      xmlns:fb="https://www.facebook.com/2008/fbml"> 
 
-	 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# bearbrandd_crossfit: http://ogp.me/ns/fb/bearbrandd_crossfit#">
-	  <meta property="fb:app_id"      content="150231875070757"> 
-	  <meta property="og:type"        content="bearbrandd_crossfit:wod"> 
-	  <meta property="og:url"         content="Put Your Own URL Here"> 
-	  <meta property="og:title"       content="Sample WOD"> 
-	  <meta property="og:description" content="Some Arbitrary String"> 
-	  <meta property="og:image"       content="https://s-static.ak.fbcdn.net/images/devsite/attachment_blank.png">
+
 
     <script type="text/javascript">
     function postCook()
     {
-        FB.api('/me/bearbrandd_crossfit:record' + 
-                    '&workout_of_the_day=http://simple-warrior-332.herokuapp.com/fb-object.html','post',
+        FB.api('/me/mproll-crossfit:log' + 
+                    '&workout=http://mproll.com/workouts/1','post',
                     function(response) {
 	console.log(response)
             if (!response || response.error) {
@@ -31,26 +25,16 @@
     <script src="http://connect.facebook.net/en_US/all.js"></script>
     <script>
         FB.init({ 
-            appId:'150231875070757', cookie:true, 
+            appId:'150346335059375', cookie:true, 
             status:true, xfbml:true, oauth:true
         });
         </script>
 
         <fb:add-to-timeline></fb:add-to-timeline>
-
-        <h3>
-            <font size="30" face="verdana" color="grey">
-                Stuffed Cookies
-            </font> 
-        </h3> 
-        <p>
-            <img title="Stuffed Cookies" 
-                            src="http://example.com/cookie.jpg" 
-                            width="550"/><br />
-        </p>       
+     
 
         <form>
-            <input type="button" value="Cook" onclick="postCook()" />
+            <input type="button" value="Log" onclick="postCook()" />
         </form>
     </body> 
     </html>
