@@ -1,6 +1,8 @@
 class BoxesController < ApplicationController
   # GET /boxes
   # GET /boxes.json
+  before_filter :authenticate_user!
+
   def index
     @boxes = Box.all
 

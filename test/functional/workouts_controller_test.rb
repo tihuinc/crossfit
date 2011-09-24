@@ -2,6 +2,9 @@ require 'test_helper'
 
 class WorkoutsControllerTest < ActionController::TestCase
   setup do
+    @user = Factory.create(:user)
+    sign_in :user, @user
+
     @workout = workouts(:one)
   end
 

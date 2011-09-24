@@ -41,6 +41,7 @@ gem 'jquery-rails'
 
 group :test do
   # Pretty printed test output
+  gem 'factory_girl_rails'
   gem 'turn', :require => false
   gem "mocha"
 end

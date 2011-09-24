@@ -2,6 +2,9 @@ require 'test_helper'
 
 class BoxesControllerTest < ActionController::TestCase
   setup do
+    @user = Factory.create(:user)
+    sign_in :user, @user
+
     @box = boxes(:one)
   end
 
