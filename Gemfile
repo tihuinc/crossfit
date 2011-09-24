@@ -12,6 +12,7 @@ gem 'devise', "1.4.5"
 gem 'therubyracer'
 gem "omniauth", "~> 0.2.6"
 gem "httparty" #alex testing
+gem "foreman"
 
 group :development do
   gem 'mongrel', '1.2.0.pre2'
