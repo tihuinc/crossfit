@@ -6,3 +6,4 @@ config/database.yml
 config/environments/development.rb
 .DS_Store
 db/schema.rb
+.idea/

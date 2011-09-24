@@ -1,3 +1,5 @@
+<% fb_timeline_meta current_url, @workout.name, @workout.content %>
+
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -13,6 +15,35 @@
 <p>
   <b>Date:</b>
   <%= @workout.date %>
+</p>
+
+<p>
+ <div id="fb-root"></div>
+ <script src="http://connect.facebook.net/en_US/all.js"></script>
+ <script>
+      FB.init({ 
+          appId:'150346335059375', cookie:true, 
+          status:true, xfbml:true, oauth:true
+      });
+      </script>
+ <script type="text/javascript">
+ function postCook()
+ {
+     FB.api('/me/mproll-crossfit:log' + 
+                 '&workout=<%=current_url%>','post',
+                 function(response) {
+	console.log(response)
+         if (!response || response.error) {
+                 alert('Error occured');
+         } else {
+             alert('Post was successful! Action ID: ' + response.id);
+             }
+     });
+ }
+ </script>
+	<form>
+     <input type="button" value="Log this Exercise on FB" onclick="postCook()" />
+ </form>	
 </p>
 
 

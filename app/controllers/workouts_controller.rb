@@ -1,7 +1,7 @@
 class WorkoutsController < ApplicationController
   # GET /workouts
   # GET /workouts.json
-  before_filter :authenticate_user!
+  before_filter :authenticate_user!, :except => [:show]
   def index
     @workouts = Workout.all
 

@@ -8,13 +8,16 @@ gem 'railties'
 gem 'mechanize'
 gem 'pg', '0.11.0'
 gem 'memcache-client'
-gem 'devise'
+gem 'devise', "1.4.5"
 gem 'therubyracer'
 gem "omniauth", "~> 0.2.6"
 gem 'rake', '0.9.2'
+gem "httparty" #alex testing
+gem "foreman"
 
 group :development do
   gem 'mongrel', '1.2.0.pre2'
+  gem "nifty-generators"
 end
 
 # Gems used only for assets and not required
@@ -39,4 +42,6 @@ gem 'jquery-rails'
 group :test do
   # Pretty printed test output
   gem 'turn', :require => false
+  gem "mocha"
 end
+
