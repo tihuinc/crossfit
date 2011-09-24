@@ -1,8 +1,13 @@
 class WorkoutRecordsController < ApplicationController
   # GET /workout_records
   # GET /workout_records.json
+  
+  
   def index
     @workout_records = WorkoutRecord.all
+    
+    require 'Facebook'
+    puts Rubyurl.shorten(session["devise.facebook_data"])
 
     respond_to do |format|
       format.html # index.html.erb
@@ -41,6 +46,9 @@ class WorkoutRecordsController < ApplicationController
   # POST /workout_records.json
   def create
     @workout_record = WorkoutRecord.new(params[:workout_record])
+    
+ 
+    
 
     respond_to do |format|
       if @workout_record.save
@@ -81,3 +89,5 @@ class WorkoutRecordsController < ApplicationController
     end
   end
 end
+
+

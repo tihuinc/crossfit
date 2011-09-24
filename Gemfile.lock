@@ -55,6 +55,9 @@ GEM
       rack (< 2, >= 1.1.0)
     gem_plugin (0.2.3)
     hike (1.2.1)
+    httparty (0.8.0)
+      multi_json
+      multi_xml
     i18n (0.6.0)
     jquery-rails (1.0.14)
       railties (~> 3.0)
@@ -70,7 +73,10 @@ GEM
       nokogiri (~> 1.4)
       webrobots (~> 0.0, >= 0.0.9)
     memcache-client (1.8.5)
+    metaclass (0.0.1)
     mime-types (1.16)
+    mocha (0.10.0)
+      metaclass (~> 0.0.1)
     mongrel (1.2.0.pre2)
       daemons (~> 1.0.10)
       gem_plugin (~> 0.2.3)
@@ -80,6 +86,7 @@ GEM
     net-http-digest_auth (1.1.1)
     net-http-persistent (1.9)
     net-ldap (0.2.2)
+    nifty-generators (0.4.6)
     nokogiri (1.4.6)
     oa-basic (0.2.6)
       oa-core (= 0.2.6)
@@ -191,11 +198,14 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails
-  devise
+  devise (= 1.4.5)
+  httparty
   jquery-rails
   mechanize
   memcache-client
+  mocha
   mongrel (= 1.2.0.pre2)
+  nifty-generators
   omniauth (~> 0.2.6)
   pg (= 0.11.0)
   rails (= 3.1.1.rc1)

@@ -11,7 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110919205645) do
+ActiveRecord::Schema.define(:version => 20110923203347) do
+
+  create_table "authentications", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "provider"
+    t.string   "uid"
+    t.string   "token"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "gyms", :force => true do |t|
     t.string   "name"
@@ -40,10 +49,26 @@ ActiveRecord::Schema.define(:version => 20110919205645) do
 
   create_table "wods", :force => true do |t|
     t.string   "name"
-    t.string   "content"
+    t.text     "content"
     t.datetime "date"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "wod_type"
   end
+
+  create_table "workout_records", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "time"
+    t.integer  "wod_id"
+    t.integer  "rounds"
+    t.integer  "max_reps"
+    t.boolean  "scaled"
+    t.text     "detail"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "workout_records", ["user_id"], :name => "index_workout_records_on_user_id"
+  add_index "workout_records", ["wod_id"], :name => "index_workout_records_on_wod_id"
 
 end
