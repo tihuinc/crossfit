@@ -17,6 +17,28 @@
   <%= @workout.date %>
 </p>
 
+<p>
+ <script src="http://connect.facebook.net/en_US/all.js"></script>
+ <script type="text/javascript">
+ function postCook()
+ {
+     FB.api('/me/mproll-crossfit:log' + 
+                 '&workout=<%=current_url%>','post',
+                 function(response) {
+	console.log(response)
+         if (!response || response.error) {
+                 alert('Error occured');
+         } else {
+             alert('Post was successful! Action ID: ' + response.id);
+             }
+     });
+ }
+ </script>
+	<form>
+     <input type="button" value="Log this Exercise on FB" onclick="postCook()" />
+ </form>	
+</p>
+
 
 <%= link_to 'Edit', edit_workout_path(@workout) %> |
 <%= link_to 'Back', workouts_path %>
