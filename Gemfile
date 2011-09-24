@@ -11,6 +11,7 @@ gem 'memcache-client'
 gem 'devise', "1.4.5"
 gem 'therubyracer'
 gem "omniauth", "~> 0.2.6"
+gem 'rake', '0.9.2'
 gem "httparty" #alex testing
 gem "foreman"
 

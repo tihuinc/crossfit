@@ -3,7 +3,7 @@
 one:
   user_id: 1
   time: MyString
-  wod_id: 1
+  workout_id: 1
   rounds: 1
   max_reps: 1
   scaled: false
@@ -12,7 +12,7 @@ one:
 two:
   user_id: 1
   time: MyString
-  wod_id: 1
+  workout_id: 1
   rounds: 1
   max_reps: 1
   scaled: false
