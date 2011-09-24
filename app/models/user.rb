@@ -10,7 +10,8 @@ class User < ActiveRecord::Base
 
   # associations
   has_many :workout_records
-  has_many :authentications
+  has_many :authentications, :dependent => :destroy
+  
   
   def self.find_for_facebook_oauth(access_token, signed_in_resource=nil)
     data = access_token['extra']['user_hash']
