@@ -33,7 +33,9 @@ module LayoutHelper
         <meta property="og:url"         content="#{url}"> 
         <meta property="og:title"       content="#{title}"> 
         <meta property="og:description" content="#{description}"> 
+        <meta property="og:message" content="arb. message"> 
         <meta property="og:image"       content="http://ogp.me/logo.png">}.html_safe
+        
     end
   end
 end
