@@ -34,6 +34,7 @@ class User < ActiveRecord::Base
       user =User.new(:email => data["email"], :password => Devise.friendly_token[0,20]) 
       user.authentications.build(:provider => access_token['provider'], :uid => access_token['uid'], :token =>(access_token['credentials']['token'] ))
       user.save
+      user
     end
   end
   
