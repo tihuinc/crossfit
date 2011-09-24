@@ -11,17 +11,17 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="field" style="display:none">
     <%= f.label :user_id %><br />
-    <%= f.number_field :user_id %>
+    <%= f.text_field :user_id, :value =>"#{current_user.id}" %>
   </div>
   <div class="field">
     <%= f.label :time %><br />
     <%= f.text_field :time %>
   </div>
   <div class="field">
-    <%= f.label :wod_id %><br />
-    <%= f.number_field :wod_id %>
+    <%= f.label :workout_id %><br />
+    <%= f.collection_select :workout_id, Workout.all, :id, :content %>
   </div>
   <div class="field">
     <%= f.label :rounds %><br />

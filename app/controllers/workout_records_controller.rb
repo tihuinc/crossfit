@@ -5,9 +5,6 @@ class WorkoutRecordsController < ApplicationController
   
   def index
     @workout_records = WorkoutRecord.all
-    
-    require 'Facebook'
-    puts Rubyurl.shorten(session["devise.facebook_data"])
 
     respond_to do |format|
       format.html # index.html.erb
