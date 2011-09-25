@@ -19,7 +19,6 @@ body {
   position: relative;
 }
 
-
 a {
   color: #000;
   &:visited {
@@ -86,4 +85,14 @@ a {
   text-align: left;
   overflow: hidden;
   padding: 10px;
+}
+
+#facebook_sign_in a{
+  text:hidden;
+  background: url('<%= asset_path "social_signin_bg.png" %>') no-repeat -141px -89px;
+  float: left;
+  line-height: 19px;
+  width:118px;
+  padding: 0 15px 0px 15px;
+  text-indent: -9999px;
 }
