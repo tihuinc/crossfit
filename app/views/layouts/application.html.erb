@@ -17,6 +17,16 @@
 
   <div class="middle">
     <div class="wrapper">
+      <div id="top_menu">
+        <ul class="top_menu_bar">
+          <li class="top_menu_cell top_menu_box">
+            <% unless user_signed_in? %>
+              <%= link_to "Log in", new_user_session_path %>
+            <% else %>
+              <%= "Welcome, #{current_user.email}" %> | <%= link_to "Log out", destroy_user_session_path, :method => 'delete' %>
+            <% end %>
+          </li>
+      </div>
 
       <div class="content">
         <% if notice %>
@@ -26,11 +36,6 @@
         <% if alert %>
           <p class="alert"><%= alert %></p>
         <% end %>
-
-        <% if user_signed_in? %>
-          <%= current_user.email %>
-        <% end %>
-        <br />
 
         <%= yield %>
       </div>
