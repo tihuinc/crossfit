@@ -1,4 +1,4 @@
-<%= form_for(@workout) do |f| %>
+<%= simple_form_for @workout do |f| %>
   <% if @workout.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@workout.errors.count, "error") %> prohibited this workout from being saved:</h2>
@@ -11,27 +11,10 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
-
-  <div class="field">
-    <%= f.label :content %><br />
-    <%= f.text_area :content, :size => "40x10" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :workout_type %><br />
-    <%= f.select :workout_type, Workout::WORKOUT_TYPES %>
-  </div>
-
-  <div class="field">
-    <%= f.label :date %><br />
-    <%= f.datetime_select :date %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  <%= f.input :name, :placeholder => 'Name', :input_html => { :class => "input_text" } %>
+  <%= f.input :content,  :placeholder => 'Details of Workout', :input_html => { :class => "input_text_area input_text" } %>
+  <%= f.input :workout_type, :collection => Workout::WORKOUT_TYPES, :input_html => { :class => "input_select" } %>
+  <br />
+  <%= f.button :submit, :class => "submit_button"%>
+  <%= link_to 'Cancel', workouts_path, :class => "cancel_button" %>
 <% end %>

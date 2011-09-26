@@ -1,0 +1,66 @@
+.input_label {
+  display: inline-block;
+  font: normal 14px/24px "Lucida Sans Unicode","Lucida Grande", "Arial", sans-serif;
+  color: #222;
+  padding-top: 4px;
+}
+
+.input_select {
+  display: block;
+  background: #fff;
+  font: 14px "Lucida Sans Unicode", "Lucida Grande", "Arial", sans-serif;
+  color: #5a5a5a;
+  padding: 4px 4px 4px 7px;
+  height: 30px;
+  border: 1px solid #c0c0c0;
+  width: 230px;
+}
+
+.input_text {
+  display: block;
+  background: #fff url('<%= asset_path "input-bg.gif" %>') repeat-x;
+  font: 14px "Lucida Sans Unicode", "Lucida Grande", "Arial", sans-serif;
+  color: #5a5a5a; padding: 0 7px;
+  height: 32px;
+  border: 1px solid #c0c0c0;
+  width: 330px;
+  margin: 0;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.input_text_area {
+  width: 330px;
+  height: 180px;
+}
+
+.submit_button {
+  font-size: 12px;
+  color: white;
+  background: #006A9B url('<%= asset_path "buttons.png" %>') 50% -31px repeat-x;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border: 4px;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 6px 20px;
+  cursor: pointer;
+}
+
+.submit_button:hover {
+  background: #006A9B url('<%= asset_path "buttons.png" %>') 50% 0 repeat-x;
+}
+
+.cancel_button {
+  margin-left: 10px;
+  padding-left: 10px;
+  border-left: 1px solid gray;
+  color: #006A9B;
+  font-size: 15px;
+  text-decoration:none;
+}
+
+.cancel_button:hover{
+  color:black;
+}
