@@ -14,6 +14,7 @@ gem "omniauth", "~> 0.2.6"
 gem 'rake', '0.9.2'
 gem "httparty" #alex testing
 gem "foreman"
+gem "simple_form"
 
 group :development do
   gem 'mongrel', '1.2.0.pre2'
