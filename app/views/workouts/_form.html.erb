@@ -15,4 +15,6 @@
   <%= f.input :content,  :placeholder => 'Details of Workout', :input_html => { :class => "input_text_area input_text" } %>
   <%= f.input :workout_type, :collection => Workout::WORKOUT_TYPES, :input_html => { :class => "input_select" } %>
   <br />
+  <%= f.button :submit, :class => "submit_button"%>
+  <%= link_to 'Cancel', workouts_path, :class => "cancel_button" %>
 <% end %>
