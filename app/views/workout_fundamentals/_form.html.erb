@@ -1,0 +1,38 @@
+<%= form_for(@workout_fundamental) do |f| %>
+  <% if @workout_fundamental.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@workout_fundamental.errors.count, "error") %> prohibited this workout_fundamental from being saved:</h2>
+
+      <ul>
+      <% @workout_fundamental.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :workout_id %><br />
+    <%= f.collection_select :workout_id, Workout.all, :id, :name %>
+  </div>
+  <div class="field">
+    <%= f.label :fundamental_id %><br />
+    <%= f.collection_select :fundamental_id, Fundamental.all, :id, :name %>
+  </div>
+  <div class="field">
+    <%= f.label :count %><br />
+    <%= f.number_field :count %>
+  </div>
+  <div class="field">
+    <%= f.label :weight %><br />
+    <%= f.number_field :weight %>
+  </div>
+  <div class="field">
+    <%= f.label :distance %><br />
+    <%= f.number_field :distance %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

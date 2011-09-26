@@ -17,7 +17,7 @@
   </div>
   <div class="field">
     <%= f.label :workout_id %><br />
-    <%= f.collection_select :workout_id, Workout.all, :id, :content %>
+    <%= f.collection_select :workout_id, Workout.all, :id, :name %>
   </div>
   <div class="field">
     <%= f.label :rounds %><br />

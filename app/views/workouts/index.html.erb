@@ -13,7 +13,7 @@
 <% @workouts.each do |workout| %>
   <tr>
     <td><%= workout.name %></td>
-    <td><%= workout.content %></td>
+    <td><%= workout_string  workout %></td>
     <td><%= workout.date %></td>
     <td><%= link_to 'Show', workout %></td>
     <td><%= link_to 'Edit', edit_workout_path(workout) %></td>

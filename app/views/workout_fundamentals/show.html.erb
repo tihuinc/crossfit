@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Workout:</b>
+  <%= @workout_fundamental.workout.try(:name) %>
+</p>
+
+<p>
+  <b>Fundamental:</b>
+<!-- not sure why @workout_fundamental.fundamental.name does'nt work... -->
+  <%= Fundamental.find(@workout_fundamental.fundamental_id).try(:name) %>
+</p>
+
+<p>
+  <b>Count:</b>
+  <%= @workout_fundamental.count %>
+</p>
+
+<p>
+  <b>Weight:</b>
+  <%= @workout_fundamental.weight %>
+</p>
+
+<p>
+  <b>Distance:</b>
+  <%= @workout_fundamental.distance %>
+</p>
+
+
+
+
+<%= link_to 'Edit', edit_workout_fundamental_path(@workout_fundamental) %> |
+<%= link_to 'Back', workout_fundamentals_path %>

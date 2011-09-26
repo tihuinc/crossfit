@@ -1,0 +1,2 @@
+module FundamentalsHelper
+end
