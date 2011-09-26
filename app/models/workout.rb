@@ -6,4 +6,5 @@ class Workout < ActiveRecord::Base
 
   # associations
   has_many :workout_records
+  has_many :workout_fundamentals
 end

@@ -1,4 +1,8 @@
 CrossfitTracker::Application.routes.draw do
+  resources :workout_fundamentals
+
+  resources :fundamentals
+
   resources :authentications
 
   resources :workout_records

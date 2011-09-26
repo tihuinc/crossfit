@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  workout_id: 1
+  fundamental_id: 1
+  count: 1
+  weight: 1
+  distance: 1
+  rounds: 1
+
+two:
+  workout_id: 1
+  fundamental_id: 1
+  count: 1
+  weight: 1
+  distance: 1
+  rounds: 1

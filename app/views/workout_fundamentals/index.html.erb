@@ -1,0 +1,33 @@
+<h1>Listing workout_fundamentals</h1>
+
+<table>
+  <tr>
+    <th>Workout</th>
+    <th>Fundamental</th>
+    <th>Count</th>
+    <th>Weight</th>
+    <th>Distance</th>
+
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @workout_fundamentals.each do |workout_fundamental| %>
+  <tr>
+    <td><%= workout_fundamental.workout.try(:name) %></td>
+    <td><%= Fundamental.find(workout_fundamental.fundamental_id).try(:name)%></td>
+    <td><%= workout_fundamental.count %></td>
+    <td><%= workout_fundamental.weight %></td>
+    <td><%= workout_fundamental.distance %></td>
+
+    <td><%= link_to 'Show', workout_fundamental %></td>
+    <td><%= link_to 'Edit', edit_workout_fundamental_path(workout_fundamental) %></td>
+    <td><%= link_to 'Destroy', workout_fundamental, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Workout fundamental', new_workout_fundamental_path %>

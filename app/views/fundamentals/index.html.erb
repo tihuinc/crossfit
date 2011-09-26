@@ -1,0 +1,23 @@
+<h1>Listing fundamentals</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @fundamentals.each do |fundamental| %>
+  <tr>
+    <td><%= fundamental.name %></td>
+    <td><%= link_to 'Show', fundamental %></td>
+    <td><%= link_to 'Edit', edit_fundamental_path(fundamental) %></td>
+    <td><%= link_to 'Destroy', fundamental, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Fundamental', new_fundamental_path %>
