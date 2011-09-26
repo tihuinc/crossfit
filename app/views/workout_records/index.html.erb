@@ -3,8 +3,9 @@
 <table>
   <tr>
     <th>User</th>
+	<th>Date</th>
     <th>Time</th>
-    <th>Wod</th>
+    <th>WOD</th>
     <th>Rounds</th>
     <th>Max reps</th>
     <th>Scaled</th>
@@ -16,9 +17,10 @@
 
 <% @workout_records.each do |workout_record| %>
   <tr>
-    <td><%= workout_record.user_id %></td>
+    <td><%= workout_record.user.try(:email) %></td>
+    <td><%= workout_record.created_at %></td>
     <td><%= workout_record.time %></td>
-    <td><%= workout_record.workout_id %></td>
+    <td><%= Workout.find(workout_record.workout_id).try(:name) %></td>
     <td><%= workout_record.rounds %></td>
     <td><%= workout_record.max_reps %></td>
     <td><%= workout_record.scaled %></td>

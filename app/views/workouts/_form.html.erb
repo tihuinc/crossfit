@@ -12,6 +12,7 @@
   <% end %>
 
   <%= f.input :name, :placeholder => 'Name', :input_html => { :class => "input_text" } %>
+ <%= f.input :rounds, :placeholder => 'Rounds', :input_html => { :class => "input_text" } %>
   <%= f.input :content,  :placeholder => 'Details of Workout', :input_html => { :class => "input_text_area input_text" } %>
   <%= f.input :workout_type, :collection => Workout::WORKOUT_TYPES, :input_html => { :class => "input_select" } %>
   <br />

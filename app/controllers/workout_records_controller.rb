@@ -43,6 +43,7 @@ class WorkoutRecordsController < ApplicationController
   # POST /workout_records.json
   def create
     @workout_record = WorkoutRecord.new(params[:workout_record])
+    @workout_record.user=current_user
     
  
     

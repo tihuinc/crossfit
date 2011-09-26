@@ -12,7 +12,7 @@
   <% end %>
 
   <%= f.input :time, :input_html => { :class => "input_text" } %>
-  <%= f.input :workout_id, :collection => Workout.all.map{|w| w.content }, :input_html => { :class => "input_select" } %>
+  <%= f.collection_select :workout_id, Workout.all, :id, :name, :input_html => { :class => "input_select" } %>
   <%= f.input :rounds, :as => :integer, :input_html => { :class => "input_text" } %>
   <%= f.input :max_reps, :as => :integer, :input_html => { :class => "input_text" } %>
   <%= f.input :scaled, :as => :boolean %>
