@@ -1,4 +1,4 @@
-<%= form_for(@workout_record) do |f| %>
+<%= simple_form_for @workout_record do |f| %>
   <% if @workout_record.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@workout_record.errors.count, "error") %> prohibited this workout_record from being saved:</h2>
@@ -11,31 +11,14 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :time %><br />
-    <%= f.text_field :time %>
-  </div>
-  <div class="field">
-    <%= f.label :workout_id %><br />
-    <%= f.collection_select :workout_id, Workout.all, :id, :content %>
-  </div>
-  <div class="field">
-    <%= f.label :rounds %><br />
-    <%= f.number_field :rounds %>
-  </div>
-  <div class="field">
-    <%= f.label :max_reps %><br />
-    <%= f.number_field :max_reps %>
-  </div>
-  <div class="field">
-    <%= f.label :scaled %><br />
-    <%= f.check_box :scaled %>
-  </div>
-  <div class="field">
-    <%= f.label :detail %><br />
-    <%= f.text_area :detail %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  <%= f.input :time, :input_html => { :class => "input_text" } %>
+  <%= f.input :workout_id, :collection => Workout.all.map{|w| w.content }, :input_html => { :class => "input_select" } %>
+  <%= f.input :rounds, :as => :integer, :input_html => { :class => "input_text" } %>
+  <%= f.input :max_reps, :as => :integer, :input_html => { :class => "input_text" } %>
+  <%= f.input :scaled, :as => :boolean %>
+  <%= f.input :detail, :input_html => { :class => "input_text_area input_text" } %>
+
+  <br />
+  <%= f.button :submit, :class => "submit_button"%>
+  <%= link_to 'Cancel', workout_records_path, :class => "cancel_button" %>
 <% end %>
