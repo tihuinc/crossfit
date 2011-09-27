@@ -5,6 +5,6 @@ class Workout < ActiveRecord::Base
   WORKOUT_TYPES = [TIME, AMRAP]
 
   # associations
-  has_many :workout_records
-  has_many :workout_fundamentals
+  has_many :workout_records, :dependent => :destroy
+  has_many :workout_fundamentals, :dependent => :destroy
 end
