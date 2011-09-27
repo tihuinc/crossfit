@@ -16,7 +16,8 @@ gem "httparty" #alex testing
 gem "foreman"
 gem "simple_form"
 gem "activeadmin"
-
+gem 'sass-rails'
+  
 group :development do
   gem 'mongrel', '1.2.0.pre2'
   gem "nifty-generators"
