@@ -4,8 +4,13 @@
  * the top of the compiled file, but it's generally better to create a new file per style scope.
  *= require screen
  *= require_self
- *= require_tree .
+ *= require blueprint/src/forms
+ *= require input
+
 */
+
+
+
 
 body {
   background: #040404 url('<%= asset_path "bg-top.png" %>') 50% 0 no-repeat;
@@ -107,3 +112,4 @@ a {
 .sign_in {
   float:left;
 }
+
