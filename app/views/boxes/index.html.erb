@@ -12,7 +12,7 @@
 <% @boxes.each do |box| %>
   <tr>
     <td><%= box.name %></td>
-    <td><%= box.url %></td>
+    <td><%= box.website_url %></td>
     <td><%= link_to 'Show', box %></td>
     <td><%= link_to 'Edit', edit_box_path(box) %></td>
     <td><%= link_to 'Destroy', box, :confirm => 'Are you sure?', :method => :delete %></td>
